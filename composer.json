@@ -1,0 +1,13 @@
+{
+    "name": "wiz/httpsqs-bundle",
+    "type": "symfony-bundle",
+    "require": {
+        "chekun/httpsqs": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Wiz\\HttpsqsBundle": ""
+        }
+    },
+    "target-dir": "Wiz/HttpsqsBundle"
+}
