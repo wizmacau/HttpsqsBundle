@@ -1,6 +1,8 @@
 {
     "name": "wiz/httpsqs-bundle",
     "type": "symfony-bundle",
+    "homepage": "http://wizmacau.com/",
+    "license": "MIT",
     "require": {
         "chekun/httpsqs": "dev-master"
     },
