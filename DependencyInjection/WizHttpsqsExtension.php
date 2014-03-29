@@ -28,9 +28,20 @@ class WizHttpsqsExtension extends Extension
         $propertyAccess = PropertyAccess::createPropertyAccessor();
 
         $queues = $propertyAccess->getValue($config, '[queues]');
+        $host = $propertyAccess->getValue($config, '[host]');
+        $port = $propertyAccess->getValue($config, '[port]');
+        $auth = $propertyAccess->getValue($config, '[auth]');
+        $charset = $propertyAccess->getValue($config, '[charset]');
+
         foreach ($queues as $queue) {
             $serviceId = 'wiz_httpsqs.queue.' . $queue;
-            $definition = new Definition('HTTPSQS\Queue', array($queue));
+            $definition = new Definition('HTTPSQS\Queue', array(
+                $queue,
+                $host,
+                $port,
+                $auth,
+                $charset
+            ));
             $container->setDefinition($serviceId, $definition);
         }
     }

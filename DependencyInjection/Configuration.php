@@ -22,6 +22,10 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('host')->defaultValue('127.0.0.1')->end()
+                ->integerNode('port')->defaultValue(1218)->end()
+                ->scalarNode('auth')->defaultValue('')->end()
+                ->scalarNode('charset')->defaultValue('utf-8')->end()
                 ->arrayNode('queues')
                     ->isRequired()
                     ->requiresAtLeastOneElement()
