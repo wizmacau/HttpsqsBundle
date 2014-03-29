@@ -3,6 +3,7 @@
     "type": "symfony-bundle",
     "homepage": "http://wizmacau.com/",
     "license": "MIT",
+    "minimum-stability": "dev",
     "require": {
         "chekun/httpsqs": "dev-master"
     },
